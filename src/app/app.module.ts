@@ -10,6 +10,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 
 import { ShopReducer, InitialState, initialState } from './store/reducer';
+import { AppRoutingModule } from './app-routing.module';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,15 @@ import { ShopReducer, InitialState, initialState } from './store/reducer';
     HomeComponent,
     HeaderComponent,
     ProductListComponent,
-    ProductComponent
+    ProductComponent,
+    CheckoutComponent
   ],
-  imports: [BrowserModule, HttpClientModule, NgReduxModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule, 
+    NgReduxModule,
+    AppRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
