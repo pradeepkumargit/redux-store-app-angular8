@@ -11,13 +11,14 @@ import { LoadItems } from './store/actions';
 export class FruitsService {
   constructor(
     private http: HttpClient,
-    private ngRedux: NgRedux<InitialState>
-  ) {}
+    private ngRedux: NgRedux<InitialState>) {
+      
+    }
 
   getAll() {
-    this.http
-      .get('http://localhost:4000/fruits')
-      .subscribe((products: Array<Product>) => {
+    this.http.get('http://localhost:4000/fruits').subscribe(
+      (products: Array<Product>) => {
+        console.log('what are the products',products);
         this.ngRedux.dispatch(LoadItems(products));
       });
   }

@@ -12,10 +12,12 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
   constructor(
     private ngRedux: NgRedux<InitialState>,
     private fruitService: FruitsService
   ) {}
+
   @select('items') items$: Observable<Array<Product>>;
 
   banners = [

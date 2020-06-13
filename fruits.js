@@ -2,7 +2,7 @@ module.exports = [
   {
     "name": "Berries",
     "price": 23.54,
-    "image": "https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80",
+    "image": "https://images.unsplash.com/photo-1515872474884-c6a548860190?ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
     "description": "Sweet popsicles to help with the heat"
   },
   {

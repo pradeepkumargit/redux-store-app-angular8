@@ -7,8 +7,21 @@
     <ul>
       <li>
         <img src="/assets/images/shopping-bag.png" alt="cart" />
-        <span class="badge" *ngIf="cart.length > 0">{{ cart.length }}</span>
+        <span class="badge" *ngIf="cart.length > 0" 
+          (click)="showppingListDialog()">{{ cart.length }}
+        </span>
       </li>
     </ul>
+  </div>
+  <div class="shopping-list" *ngIf="showShoppingList">
+      <div class="product" *ngFor="let item of cart">
+        <div class="product-image-holder">
+          <img [src]="item.image" [alt]="item.name" class="product-image" />
+        </div>
+        <div class="product-details">
+          <p class="product-details__name">{{ item.name }}</p>
+          <p class="product-details__price">${{ item.price }}</p>
+        </div>
+      </div>
   </div>
 </header>
